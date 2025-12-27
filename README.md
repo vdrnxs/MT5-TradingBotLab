@@ -26,9 +26,11 @@ Download and install MT5 in portable mode:
 $url = "https://download.mql5.com/cdn/web/metaquotes.software.corp/mt5/mt5setup.exe"
 Invoke-WebRequest -Uri $url -OutFile "mt5setup.exe"
 
-# Install in portable mode to this project's mt5 folder
-.\mt5setup.exe /portable /PATH:"<full-path-to-this-project>\mt5"
+# Run installer in portable mode
+.\mt5setup.exe /portable
 ```
+
+When the installer opens, select the `mt5` folder inside this project as the installation directory.
 
 After installation:
 1. Launch MT5: `.\mt5\terminal64.exe /portable`
@@ -37,9 +39,7 @@ After installation:
 ### 2. Install Python Dependencies
 
 ```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+pip install pandas matplotlib
 ```
 
 ## Usage
