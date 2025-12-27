@@ -7,12 +7,10 @@ mt5/*
 !mt5/MQL5/
 mt5/MQL5/*
 !mt5/MQL5/Experts/
+mt5/MQL5/Experts/*
 
-# Exclude compiled files and legacy code from Experts
-mt5/MQL5/Experts/**/*.ex5
-mt5/MQL5/Experts/**/*.set
-mt5/MQL5/Experts/legacy/
-mt5/MQL5/Experts/buenos/
+# Only include our custom EA
+!mt5/MQL5/Experts/a4n_bot_v2.mq5
 
 # ==================================
 # Backtest Results & Generated Files
