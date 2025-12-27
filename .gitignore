@@ -1,0 +1,115 @@
+# ==================================
+# MT5 Installation
+# ==================================
+
+# Exclude entire MT5 directory except our custom EA code
+mt5/*
+!mt5/MQL5/
+mt5/MQL5/*
+!mt5/MQL5/Experts/
+
+# Exclude compiled files and legacy code from Experts
+mt5/MQL5/Experts/**/*.ex5
+mt5/MQL5/Experts/**/*.set
+mt5/MQL5/Experts/legacy/
+mt5/MQL5/Experts/buenos/
+
+# ==================================
+# Backtest Results & Generated Files
+# ==================================
+
+# Backtest configuration files
+configs/
+
+# Backtest reports
+reports/
+
+# Compilation logs
+logs/
+
+# Legacy scripts (not needed for basic usage)
+scripts/legacy/
+
+# ==================================
+# Python
+# ==================================
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# ==================================
+# IDE & Editors
+# ==================================
+
+# Claude Code
+.claude/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ==================================
+# OS Files
+# ==================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ==================================
+# Miscellaneous
+# ==================================
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+*~.nib
+nul
+
+# Archives (if you don't want to track them)
+*.zip
+*.7z
+*.rar
+*.tar.gz
+
+# Environment variables
+.env
+.env.local
