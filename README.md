@@ -19,22 +19,32 @@ Automated backtesting system for MetaTrader 5 algorithmic trading strategies.
 
 ### 1. Install MT5 Portable
 
-Download and install MT5 in portable mode:
+Download and install MT5:
 
 ```powershell
 # Download installer
 $url = "https://download.mql5.com/cdn/web/metaquotes.software.corp/mt5/mt5setup.exe"
 Invoke-WebRequest -Uri $url -OutFile "mt5setup.exe"
 
-# Run installer in portable mode
-.\mt5setup.exe /portable
+# Run installer
+.\mt5setup.exe
 ```
 
-When the installer opens, select the `mt5` folder inside this project as the installation directory.
+**Important**:
+- During installation, select a custom folder inside this project directory (we use `mt5` but you can choose any name)
+- Do NOT install in `Program Files`
 
 After installation:
-1. Launch MT5: `.\mt5\terminal64.exe /portable`
-2. Download historical data: Press F2 → Select symbol (e.g., USDJPY) → Download H4 data
+
+1. **Launch MT5 in portable mode** (always use `/portable` flag):
+   ```powershell
+   .\mt5\terminal64.exe /portable
+   ```
+   Replace `mt5` with your chosen folder name if different.
+
+2. **Download historical data**: Press F2 → Select symbol (e.g., USDJPY) → Download H4 data
+
+The `/portable` flag makes MT5 store all data in the installation folder instead of system directories. This keeps everything self-contained in the project.
 
 ### 2. Install Python Dependencies
 
