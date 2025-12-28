@@ -36,15 +36,15 @@ Invoke-WebRequest -Uri $url -OutFile "mt5setup.exe"
 
 After installation:
 
-1. **Launch MT5 in portable mode** (always use `/portable` flag):
-   ```powershell
-   .\mt5\terminal64.exe /portable
-   ```
-   Replace `mt5` with your chosen folder name if different.
+**Activate portable mode** (run this once to create the MQL5 folder structure):
+```powershell
+.\mt5\terminal64.exe /portable
+```
+Replace `mt5` with your chosen folder name if different.
 
-2. **Download historical data**: Press F2 → Select symbol (e.g., USDJPY) → Download H4 data
+The `/portable` flag creates the `MQL5` folder and makes MT5 store all data in the installation folder instead of `AppData`. This keeps everything self-contained in the project.
 
-The `/portable` flag makes MT5 store all data in the installation folder instead of system directories. This keeps everything self-contained in the project.
+**Note**: Always launch MT5 with the `/portable` flag to ensure it uses the custom folder instead of system directories.
 
 ### 2. Install Python Dependencies
 
